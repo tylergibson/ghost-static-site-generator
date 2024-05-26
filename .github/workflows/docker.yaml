@@ -38,7 +38,7 @@ jobs:
         id: ghost-static-site-generator
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ${{github.actor}}/ghost-static-site-generator
+          images: ${{ secrets.DOCKER_USERNAME }}/ghost-static-site-generator
       
       - name: Build and push ghost-static-site-generator Docker image
         id: build-push-ghost-static-site-generator
