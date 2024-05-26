@@ -13,7 +13,7 @@ on:
   release:
     types: [published]
   push:
-      branches: [ "main" ]
+      branches: [ "main", "master" ]
       # tags: [ 'v*.*.*' ]
 
 jobs:
