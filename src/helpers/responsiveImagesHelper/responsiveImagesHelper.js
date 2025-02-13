@@ -7,13 +7,7 @@ const crawlPageAsyncHelper = require('../crawlPageAsyncHelper');
  * These are the image sizes that we want to generate
  * @type {string[]}
  */
-const imageSizes = [
-  'w100',
-  'w300',
-  'w600',
-  'w1000',
-  'w2000',
-];
+const imageSizes = String(OPTIONS.RESPONSIVE_SIZES).split(',');
 
 const getAllFileNames = (directory) => {
   const directoryContents = fs.readdirSync(directory);
