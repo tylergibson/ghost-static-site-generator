@@ -27,6 +27,7 @@ const crawlPageHelper = (url) => {
     return;
   }
   const wgetCommand = `wget -q ${OPTIONS.SHOW_PROGRESS_BAR}--recursive `
+    + `${OPTIONS.X_FORWARDED_PROTO}`
     + '--timestamping '
     + '--page-requisites '
     + '--no-parent '
