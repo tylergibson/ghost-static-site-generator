@@ -31,7 +31,7 @@ const crawlPageHelper = (url) => {
     + '--page-requisites '
     + '--no-parent '
     + '--no-host-directories '
-    + '--restrict-file-name=unix '
+    + '--restrict-file-names=unix '
     + `--directory-prefix ${OPTIONS.STATIC_DIRECTORY} ${contentOnError()} `
     + `${saveAsReferer()}`
     + `${url}`;
