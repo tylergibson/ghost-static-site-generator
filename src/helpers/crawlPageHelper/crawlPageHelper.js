@@ -27,11 +27,12 @@ const crawlPageHelper = (url) => {
     return;
   }
   const wgetCommand = `wget -q ${OPTIONS.SHOW_PROGRESS_BAR}--recursive `
+    + `${OPTIONS.X_FORWARDED_PROTO}`
     + '--timestamping '
     + '--page-requisites '
     + '--no-parent '
     + '--no-host-directories '
-    + '--restrict-file-name=unix '
+    + '--restrict-file-names=unix '
     + `--directory-prefix ${OPTIONS.STATIC_DIRECTORY} ${contentOnError()} `
     + `${saveAsReferer()}`
     + `${url}`;

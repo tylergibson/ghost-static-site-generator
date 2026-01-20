@@ -18,6 +18,7 @@ const PRODUCTION_DOMAIN = (argv.productionDomain || argv.url || SOURCE_DOMAIN).r
 const IGNORE_ABSOLUTE_PATHS = argv.ignoreAbsolutePaths || false;
 const STATIC_DIRECTORY = argv.dest || 'static';
 const SAVE_AS_REFERER = argv.saveAsReferer || false;
+const X_FORWARDED_PROTO = argv.avoidHttps ? '--header="X-Forwarded-Proto: https" ' : '';
 const RESPONSIVE_SIZES = argv.responsiveSizes || 'w150,w300,w720,w960,w1200,w2000'
 
 const shouldShowProgress = () => {
@@ -57,6 +58,8 @@ const OPTIONS = {
   // --save-as-referer flag will save redirected assets using the
   // original url path instead of the redirected destination url
   SAVE_AS_REFERER,
+  // --avoid-https will avoid redirects to https by setting X-Forwarded-Proto to https
+  X_FORWARDED_PROTO,
   // --responsive-sizes flag will override the size generator sizes
   // set this to match your image_sizes in package.json
   // otherwise wget can quickly error out from queuing generation tasks on ghost docker hosts.

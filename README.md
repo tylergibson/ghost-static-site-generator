@@ -26,7 +26,7 @@ $ brew install wget
 ```
 2. Clone this repository
 ```
-$ git clone https://github.com/itsignacioportal/ghost-static-site-generator/
+$ git clone https://github.com/SimonMo88/ghost-static-site-generator/
 $ cd ghost-static-site-generator
 $ npm install
 ```
@@ -38,7 +38,7 @@ $ choco install wget
 ```
 2. Clone this repository
 ```
-$ git clone https://github.com/itsignacioportal/ghost-static-site-generator/
+$ git clone https://github.com/SimonMo88/ghost-static-site-generator/
 $ cd ghost-static-site-generator
 $ npm install
 ```
@@ -47,7 +47,7 @@ $ npm install
 To install docker see: [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
 1. [Optional Build] Clone this repository
 ```bash
-$ git clone https://github.com/itsignacioportal/ghost-static-site-generator/
+$ git clone https://github.com/SimonMo88/ghost-static-site-generator/
 $ cd ghost-static-site-generator
 $ docker build -t ghost-static-site-generator:latest .
 ```
